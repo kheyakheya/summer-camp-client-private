@@ -41,22 +41,7 @@ const AddClass = () => {
 
                         }
                     })
-                // const newItem = { name, price: parseFloat(price), category, recipe, image: imageURL }
-                // console.log('newitem', newItem);
-                // post using axiossecure for jwt security
-                // axiosSecure.post('/menu', newItem)
-                // .then(data=>{
-                //     if(data.data.insertedId){
-                //         reset();
-                //         Swal.fire({
-                //             position: 'top-end',
-                //             icon: 'success',
-                //             title: 'Item Added Successfully',
-                //             showConfirmButton: false,
-                //             timer: 1500
-                //           })
-                //     }
-                // })
+                
             })
     };
     return (
