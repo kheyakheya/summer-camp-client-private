@@ -1,4 +1,3 @@
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import useAxiosSecure from '../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from "react";
