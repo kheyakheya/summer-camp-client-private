@@ -61,7 +61,7 @@ const Register = () => {
                 e.target.reset();
                 profileUpdate(name, photo)
                     .then(() => {
-                        const saveUser = { name: name, email: email }
+                        const saveUser = { name: name, email: email, image: photo }
                         fetch(`http://localhost:5000/users/${registeredUser.email}`, {
                             method: 'PUT',
                             headers: { 'content-type': 'application/json' },

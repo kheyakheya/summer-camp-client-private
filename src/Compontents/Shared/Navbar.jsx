@@ -17,12 +17,12 @@ const menuItems=
 </li>
 <li><NavLink to='/instructor' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Instructor</NavLink>
 </li> 
-<li><NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Classes</NavLink>
+<li><NavLink to='/classes' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Classes</NavLink>
 </li>
 
  {user?.email ? 
 <>
-<li><NavLink to='/dashboard/myCart' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Dashboard</NavLink>
+<li><NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Dashboard</NavLink>
  </li>
 
 

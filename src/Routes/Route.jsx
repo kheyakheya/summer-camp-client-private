@@ -11,7 +11,10 @@ import Register from "../Pages/Register";
 import AllUsers from "../Pages/AllUsers";
 import AdminRoute from "./AdminRoute";
 import DashboardLayout from "../Layout/DashboardLayout";
-import Dummyhome from "../Pages/Dummyhome";
+import Instructors from "../Pages/Instructors";
+import AddClass from "../Pages/AddClass";
+import InstructorRoute from "./InstructorRoute";
+import PrivateRoute from "./PrivateRoute";
   
  export const router = createBrowserRouter([
     {
@@ -23,14 +26,12 @@ import Dummyhome from "../Pages/Dummyhome";
         element: <Home></Home>
        },
        {
-        path: '/allUsers',
-        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        path: '/instructor',
+        element: <Instructors></Instructors>
        },
+       
 
-      //  {
-      //   path: '/blog',
-      //   element:<Blog></Blog>
-      //  },
+     
        {
         path: '/login',
         element: <Login></Login>
@@ -44,13 +45,16 @@ import Dummyhome from "../Pages/Dummyhome";
     },
     {
       path: '/dashboard',
-      element:<DashboardLayout></DashboardLayout>,
+      element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
       children:[
         {
-          path: 'userhome',
-          element: <Dummyhome></Dummyhome>
-
-        }
+          path: 'allUsers',
+          element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+         },
+         {
+          path: 'addClass',
+          element:<InstructorRoute><AddClass></AddClass></InstructorRoute>
+         }
         
       ]
     }
