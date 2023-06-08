@@ -18,6 +18,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllClasses from "../Pages/AllClasses";
 import InstructorClass from "../Pages/InstructorClass";
 import ApprovedClasses from "../Pages/ApprovedClasses";
+import StudentCart from "../Pages/StudentCart";
   
  export const router = createBrowserRouter([
     {
@@ -68,6 +69,10 @@ import ApprovedClasses from "../Pages/ApprovedClasses";
          {
           path: 'instructorClass',
           element:<InstructorRoute><InstructorClass></InstructorClass></InstructorRoute>
+         },
+         {
+          path: 'selectedClass',
+          element: <StudentCart></StudentCart>
          }
         
       ]
