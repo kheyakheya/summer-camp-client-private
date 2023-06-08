@@ -17,7 +17,7 @@ const ClassCard = ({ lesson }) => {
     // add to cart 
     const handleCart = (lesson) => {
         if (user && user?.email) {
-            const chosenClass = { classId: lesson._id, name: lesson.name, instructor:lesson.instructor, price: lesson.price, email: user.email };
+            const chosenClass = { classId: lesson._id, name: lesson.name, instructor:lesson.instructor, price: lesson.price, email: user.email, enrolled: parseInt(lesson.enrolled), seats: parseInt(lesson.seats) };
             fetch('http://localhost:5000/cart', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },

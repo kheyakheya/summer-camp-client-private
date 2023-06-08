@@ -57,7 +57,7 @@ const StudentCart = () => {
                             <td>{lesson.instructor}</td>
                             <td>{lesson.price}</td>
                             <td><button onClick={()=>handleDelete(lesson)}><FaTrash className="text-red-400"></FaTrash></button></td>
-                            <td><Link to={`/payment/${lesson._id}`} ><button>Pay</button></Link></td>
+                            <td><Link to={`payment/${lesson._id}`} ><button>Pay</button></Link></td>
                           </tr>
                     )}
 

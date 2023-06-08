@@ -39,7 +39,12 @@ const DashboardLayout = () => {
 
                             </>
                         ) : (
-                            <li><NavLink to="/dashboard/selectedClass"> My Selected Class</NavLink></li>
+                            <>
+                             <li><NavLink to="/dashboard/selectedClass"> My Selected Class</NavLink></li>
+                             <li><NavLink to="/dashboard/enrolledClass"> My Enrolled Class</NavLink></li>
+                             <li><NavLink to="/dashboard/paymentHistory"> Payment History</NavLink></li>
+
+                            </>
 
                         )
                     }
