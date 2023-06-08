@@ -87,6 +87,7 @@ const Register = () => {
     };
 
     return (
+        // TODO: special charecter
         <div className="hero min-h-screen bg-white pt-12">
             <div className="hero-content flex-col ">
                 <div className="text-center pb-4">
