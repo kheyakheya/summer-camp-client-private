@@ -33,8 +33,11 @@ const DashboardLayout = () => {
                             </>
 
                         ) : isInstructor ? (
-                            <li><NavLink to="/dashboard/addClass"> Add a Class</NavLink></li>
+                            <>
+                             <li><NavLink to="/dashboard/addClass"> Add a Class</NavLink></li>
+                             <li><NavLink to="/dashboard/instructorClass">My Classes</NavLink></li>
 
+                            </>
                         ) : (
                             <li><NavLink to="/dashboard/userhome"> Student Home</NavLink></li>
 
