@@ -1,6 +1,7 @@
 import useAxiosSecure from '../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from "react";
+import Swal from 'sweetalert2';
 
 const AllUsers = () => {
     const [axiosSecure]=useAxiosSecure();
@@ -20,8 +21,11 @@ const AllUsers = () => {
         .then(data=>{
             if(data.modifiedCount){
                 refetch();
-                alert(`${user.name} is admin`);
-                
+                Swal.fire(
+                    `${user.name} is Admin Now!`,
+                    'success'
+    
+                );                
             }
         })
     }
@@ -33,7 +37,11 @@ const AllUsers = () => {
     .then(data=>{
         if(data.modifiedCount){
             refetch();
-            alert(`${user.name} is instructor`);
+            Swal.fire(
+                `${user.name} is instructor!`,
+                'success'
+
+            );
             
             
         }

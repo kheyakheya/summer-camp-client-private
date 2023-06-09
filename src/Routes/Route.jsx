@@ -55,7 +55,7 @@ import PaymentHistory from "../Pages/PaymentHistory";
     },
     {
       path: '/dashboard',
-      element:<DashboardLayout></DashboardLayout>,
+      element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
       children:[
         {
           path: 'allUsers',
