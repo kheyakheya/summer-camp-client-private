@@ -15,14 +15,14 @@ const menuItems=
         
 <li><NavLink to='/' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Home</NavLink>
 </li>
-<li><NavLink to='/instructor' className={({ isActive }) => (isActive ? 'text-secondary text-xl bg-transparent font-bold' : 'myMenu')}>Instructor</NavLink>
+<li><NavLink to='/instructor' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Instructor</NavLink>
 </li> 
-<li><NavLink to='/classes' className={({ isActive }) => (isActive ? 'text-secondary text-xl bg-transparent font-bold' : 'myMenu')}>Classes</NavLink>
+<li><NavLink to='/classes' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Classes</NavLink>
 </li>
 
  {user?.email ? 
 <>
-<li><NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'text-secondary text-xl bg-transparent font-bold' : 'myMenu')}>Dashboard</NavLink>
+<li><NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Dashboard</NavLink>
  </li>
 
 
@@ -31,7 +31,7 @@ const menuItems=
 
 <li><Link  className= 'myMenu'><button onClick={handleLogout}>Logout</button></Link>
 </li>
-</> : <li><NavLink to='/login' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Login</NavLink>
+</> : <li><NavLink to='/login' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Login</NavLink>
 </li> 
 } 
 </>
