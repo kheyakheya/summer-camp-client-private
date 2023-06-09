@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import  { useEffect, useState } from 'react';
+import SectionHeading from '../SectionHeading';
 
 const TopClasses = () => {
     const [topClasses, setTopClasses]= useState([]);
@@ -11,6 +12,7 @@ const TopClasses = () => {
     },[])
     return (
         <div>
+            <SectionHeading></SectionHeading>
             <h1>top classes {topClasses.length}</h1>
         </div>
     );

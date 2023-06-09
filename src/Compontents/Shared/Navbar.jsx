@@ -13,16 +13,16 @@ const handleLogout=()=>{
 const menuItems=
 <>
         
-<li><NavLink to='/' className={({ isActive }) => (isActive ? 'text-secondary text-2xl font-bold' : 'myMenu')}>Home</NavLink>
+<li><NavLink to='/' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Home</NavLink>
 </li>
-<li><NavLink to='/instructor' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Instructor</NavLink>
+<li><NavLink to='/instructor' className={({ isActive }) => (isActive ? 'text-secondary text-xl bg-transparent font-bold' : 'myMenu')}>Instructor</NavLink>
 </li> 
-<li><NavLink to='/classes' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Classes</NavLink>
+<li><NavLink to='/classes' className={({ isActive }) => (isActive ? 'text-secondary text-xl bg-transparent font-bold' : 'myMenu')}>Classes</NavLink>
 </li>
 
  {user?.email ? 
 <>
-<li><NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'text-secondary text-xl font-bold' : 'myMenu')}>Dashboard</NavLink>
+<li><NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'text-secondary text-xl bg-transparent font-bold' : 'myMenu')}>Dashboard</NavLink>
  </li>
 
 
@@ -47,7 +47,7 @@ return (
                        {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">Sporting Star</Link>
+                <Link to='/' className=".myMenu normal-case text-xl">Sporting Star</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

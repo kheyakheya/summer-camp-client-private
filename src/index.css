@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.myMenu{
+    @apply text-white text-xl  tracking-wide  transition-colors duration-200 hover:text-red-950 hover:font-bold hover:bg-transparent
+  }
