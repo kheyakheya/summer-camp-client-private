@@ -42,6 +42,7 @@ const StudentCart = () => {
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Image</th>
                         <th>Class</th>
                         <th>Instructor</th>
                         <th>Price</th>
@@ -53,6 +54,7 @@ const StudentCart = () => {
                     {cart.map((lesson, index) =>
                         <tr key={lesson._id}>
                             <th>{index + 1}</th>
+                            <td><img src={lesson.image}></img></td>
                             <td>{lesson.name}</td>
                             <td>{lesson.instructor}</td>
                             <td>{lesson.price}</td>
