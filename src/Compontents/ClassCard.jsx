@@ -17,7 +17,7 @@ const ClassCard = ({ lesson }) => {
     // add to cart 
     const handleCart = (lesson) => {
         if (user && user?.email) {
-            const chosenClass = { classId: lesson._id, name: lesson.name, instructor:lesson.instructor, price: lesson.price, email: user.email, enrolled: parseInt(lesson.enrolled), seats: parseInt(lesson.seats) };
+            const chosenClass = { classId: lesson._id, name: lesson.name, instructor:lesson.instructor, price: lesson.price, email: user.email, enrolled: parseInt(lesson.enrolled), seats: parseInt(lesson.seats), image: lesson.image };
             fetch('http://localhost:5000/cart', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
@@ -61,7 +61,7 @@ const ClassCard = ({ lesson }) => {
                 <p>Available Seats: {lesson.seats}</p>
                 <p>Price: ${lesson.price}</p>
                 <div className="card-actions">
-                    <button onClick={() => handleCart(lesson)} disabled={isAdmin || isInstructor || lesson.seats === 0} className="btn btn-primary">Select</button>
+                    <button onClick={() => handleCart(lesson)} disabled={isAdmin || isInstructor || lesson.seats === 0} className="btn border-none text-white bg-red-700">Select</button>
                 </div>
             </div>
         </div>

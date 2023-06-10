@@ -11,8 +11,8 @@ const DashboardLayout = () => {
     return (
         
        <>
-        <Navbar></Navbar>
-         <div className="pt-16 drawer drawer-mobile">
+        {/* <Navbar></Navbar> */}
+         <div className="text-white drawer drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
@@ -20,7 +20,7 @@ const DashboardLayout = () => {
                 <Outlet></Outlet>
 
             </div>
-            <div className="drawer-side bg-[#eaff00]">
+            <div className="drawer-side bg-red-700">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80">
                     {

@@ -19,6 +19,7 @@ const MyEnroll = () => {
     <thead>
       <tr>
         <th>#</th>
+        <th>Image</th>
         <th>Name</th>
         <th>Email</th>
         <th>Instructor</th>
@@ -29,6 +30,7 @@ const MyEnroll = () => {
       {enrolled.map((paid,index)=>
       <tr key={paid._id}>
         <th>{index+1}</th>
+        <th>{paid.image}</th>
         <td>{paid.name}</td>
         <td>{paid.email}</td>
         <td>{paid.instructor}</td>

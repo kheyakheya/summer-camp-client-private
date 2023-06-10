@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import SectionHeading from "../Compontents/SectionHeading";
 
 const img_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
 const AddClass = () => {
@@ -46,6 +47,7 @@ const AddClass = () => {
     };
     return (
         <div className="pt-20 w-full px-16">
+            <SectionHeading heading={'Add A Class'}></SectionHeading>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
                     <label className="label ">

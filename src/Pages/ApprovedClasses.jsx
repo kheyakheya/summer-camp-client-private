@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ClassCard from "../Compontents/ClassCard";
+import SectionHeading from "../Compontents/SectionHeading";
 
 const ApprovedClasses = () => {
     const [classes, setClasses]= useState([]);
@@ -12,8 +13,8 @@ const ApprovedClasses = () => {
     },[])
     return (
         <div className="pt-16">
-            <h2>All the approved classes {classes.length}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-content-center">
+            <SectionHeading heading={'All Classes'}></SectionHeading>
+            <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-6 place-content-center">
                 {classes.map(lesson=><ClassCard key={lesson._id} lesson={lesson}></ClassCard>)}
             </div>
 
