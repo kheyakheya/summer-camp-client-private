@@ -5,3 +5,10 @@
 .myMenu{
     @apply text-white text-xl  tracking-wide  transition-colors duration-200 hover:text-red-950 hover:font-bold hover:bg-transparent
   }
+  .drawer-side a.active{
+    color: white;
+    background-color: #b91c1c;
+}
+.drawer-side a {
+   background-color: transparent;
+}

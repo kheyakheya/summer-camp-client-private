@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useCart from "../hooks/useCart";
 import { FaTrash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import SectionHeading from "../Compontents/SectionHeading";
 
 const StudentCart = () => {
     const [cart, refetch] = useCart();
@@ -35,9 +36,12 @@ const StudentCart = () => {
 
     }
     return (
-        <div>
-            <h1>total order{cart.length}</h1>
-            <table className="table w-full">
+        <div className="px-12">
+            <div className="mb-12">
+            <SectionHeading heading={'My Selected Classes'}></SectionHeading>
+
+            </div>
+            <table className="my-12 table w-full">
                 {/* head*/}
                 <thead>
                     <tr>
@@ -54,12 +58,12 @@ const StudentCart = () => {
                     {cart.map((lesson, index) =>
                         <tr key={lesson._id}>
                             <th>{index + 1}</th>
-                            <td><img src={lesson.image}></img></td>
+                            <td><img className="w-20 h-20" src={lesson.image}></img></td>
                             <td>{lesson.name}</td>
                             <td>{lesson.instructor}</td>
                             <td>{lesson.price}</td>
-                            <td><button onClick={()=>handleDelete(lesson)}><FaTrash className="text-red-400"></FaTrash></button></td>
-                            <td><Link to={`payment/${lesson._id}`} ><button>Pay</button></Link></td>
+                            <td><button onClick={()=>handleDelete(lesson)}><FaTrash className="text-red-700"></FaTrash></button></td>
+                            <td><Link to={`payment/${lesson._id}`} ><button className='btn btn-sm bg-red-700 text-white'>Pay</button></Link></td>
                           </tr>
                     )}
 
