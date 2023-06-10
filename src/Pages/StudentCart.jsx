@@ -37,8 +37,8 @@ const StudentCart = () => {
     }
     return (
         <div className="px-12">
-            <div className="mb-12">
-            <SectionHeading heading={'My Selected Classes'}></SectionHeading>
+            <div className="mt-2 mb-16">
+            <SectionHeading heading={'Selected Classes'}></SectionHeading>
 
             </div>
             <table className="my-12 table w-full">
@@ -63,7 +63,7 @@ const StudentCart = () => {
                             <td>{lesson.instructor}</td>
                             <td>{lesson.price}</td>
                             <td><button onClick={()=>handleDelete(lesson)}><FaTrash className="text-red-700"></FaTrash></button></td>
-                            <td><Link to={`payment/${lesson._id}`} ><button className='btn btn-sm bg-red-700 text-white'>Pay</button></Link></td>
+                            <td><Link to={`payment/${lesson._id}`} ><button className='btn border-none btn-sm bg-red-700 text-white'>Pay</button></Link></td>
                           </tr>
                     )}
 

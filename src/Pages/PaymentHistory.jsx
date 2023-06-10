@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import SectionHeading from "../Compontents/SectionHeading";
 
 const PaymentHistory = () => {
     const {user}= useContext(AuthContext);
@@ -12,8 +13,11 @@ const PaymentHistory = () => {
         })
     },[user])
     return (
-        <div>
-            <h2>Payment History {billings.length}</h2>
+      <div className="px-12">
+      <div className="mt-2 mb-16">
+      <SectionHeading heading={'Payment History'}></SectionHeading>
+
+      </div>
             <table className="table w-full">
     {/* head*/}
     <thead>

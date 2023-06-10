@@ -113,9 +113,11 @@ const CheckoutForm = ({price,lesson}) => {
            },
          }}
        />
-       <button className="btn btn-primary btn-sm  mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
+       
+       <button className="btn bg-red-700 border-none btn-sm  mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
          Pay
        </button>
+      
      </form>
      {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
      {transactionId && <p className="text-green-700">Transaction Completed with transaction id: {transactionId}</p>}

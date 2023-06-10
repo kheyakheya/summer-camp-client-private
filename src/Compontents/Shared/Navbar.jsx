@@ -22,7 +22,7 @@ const menuItems=
 
  {user?.email ? 
 <>
-<li><NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Dashboard</NavLink>
+<li><NavLink to='/dashboard/welcome' className={({ isActive }) => (isActive ? 'text-2xl font-bold bg-transparent' : 'myMenu')}>Dashboard</NavLink>
  </li>
 
 

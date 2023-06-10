@@ -3,6 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
 import useCart from '../../hooks/useCart';
+import SectionHeading from '../../Compontents/SectionHeading';
 const stripePromise= loadStripe(import.meta.env.VITE_PAYMENT_PK);
 
 
@@ -16,12 +17,19 @@ const Payment = () => {
       
     return (
        
-        <div>
-            <h1>pay {price} for {lesson?.name} class</h1>
-            <Elements stripe={stripePromise}>
+       
+           <div>
+            <SectionHeading heading={'Payment'}></SectionHeading>
+           <h1 className='text-2xl text-center my-12'>pay $ {price} for {lesson?.name} class</h1>
+           
+           <div className='ml-12'>
+           <Elements stripe={stripePromise}>
                 <CheckoutForm lesson={lesson} price={price}></CheckoutForm>
             </Elements>
-        </div>
+           </div>
+            </div>
+        
+      
     );
 };
 

@@ -53,13 +53,15 @@ const DashboardLayout = () => {
 
                     <div className="divider"></div>
                     <li><NavLink to="/"> Home</NavLink> </li>
-                    <li><NavLink to="/menu"> Our Menu</NavLink></li>
-                    <li><NavLink to="/order/salad">Order Food</NavLink></li>
+                    <li><NavLink to="/instructor"> Our Menu</NavLink></li>
+                    <li><NavLink to="/classes">Order Food</NavLink></li>
                 </ul>
 
             </div>
         </div>
-        <Footer></Footer>
+       <div className="-mt-24">
+       <Footer></Footer>
+       </div>
        </>
 
     );

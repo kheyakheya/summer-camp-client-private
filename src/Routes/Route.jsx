@@ -22,6 +22,7 @@ import StudentCart from "../Pages/StudentCart";
 import Payment from "../Pages/Payment/Payment";
 import MyEnroll from "../Pages/MyEnroll";
 import PaymentHistory from "../Pages/PaymentHistory";
+import Welcome from "../Pages/welcome";
   
  export const router = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ import PaymentHistory from "../Pages/PaymentHistory";
       path: '/dashboard',
       element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
       children:[
+        {
+          path: 'welcome',
+          element: <Welcome></Welcome>
+        },
         {
           path: 'allUsers',
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
