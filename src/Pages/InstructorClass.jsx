@@ -5,6 +5,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { GrUpdate } from "react-icons/gr";
 import UpdateModal from "../Compontents/UpdateModal";
 import Swal from "sweetalert2";
+import SectionHeading from "../Compontents/SectionHeading";
 
 const InstructorClass = () => {
     const {user, loading}= useContext(AuthContext);
@@ -45,9 +46,11 @@ const InstructorClass = () => {
       }
    
     return (
-        <div>
-            <h2>instructor class {lessons.length}</h2>
-            <table className="table w-full">
+        <div className="px-12">
+      <div className="mt-2 mb-16 ">
+      <SectionHeading heading={'My Added Classes'}></SectionHeading>
+
+      </div>            <table className="table w-full">
                 {/* head*/}
                 <thead>
                     <tr>
@@ -73,7 +76,7 @@ const InstructorClass = () => {
                             <td>
                                
 
-                                <label htmlFor={`my-modal-${index}`}><GrUpdate></GrUpdate></label>
+                                <label className="bg-red-700" htmlFor={`my-modal-${index}`}><GrUpdate ></GrUpdate></label>
                                 <UpdateModal index={index} lesson={lesson} modalHandler={modalHandler} ></UpdateModal>
 
                             </td>

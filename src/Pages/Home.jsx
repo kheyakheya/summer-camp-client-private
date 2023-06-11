@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import Banner from "../Compontents/Home/Banner";
+//import Banner from "../Compontents/Home/Banner";
 import TopClasses from "../Compontents/Home/TopClasses";
 import TopInstructor from "../Compontents/TopInstructor";
 import OurStars from "../Compontents/OurStars";
+import BannerHome from "../Compontents/BannerHome";
 
 const Home = () => {
     return (
@@ -10,7 +11,8 @@ const Home = () => {
             <Helmet>
                 <title>Sporting Star || Home </title>
             </Helmet>
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
+            <BannerHome></BannerHome>
             <TopClasses></TopClasses>
             <TopInstructor></TopInstructor>
             <OurStars></OurStars>

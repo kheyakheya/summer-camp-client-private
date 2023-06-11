@@ -1,8 +1,11 @@
-import { FcApprove, FcDisapprove, FcFeedback } from "react-icons/fc";
+import { FcApproval,  FcDisapprove, FcFeedback } from "react-icons/fc";
+import { MdDangerous } from "react-icons/md";
+
 import useClasses from "../hooks/useClasses";
 
 import Swal from "sweetalert2";
 import FeedbackModal from "../Compontents/FeedbackModal";
+import SectionHeading from "../Compontents/SectionHeading";
 
 const AllClasses = () => {
     const [classes, refetch] = useClasses();
@@ -78,9 +81,9 @@ const AllClasses = () => {
   
       }
     return (
-        <div>
-            <h2>{classes.length}</h2>
-            <table className="table w-full">
+        <div className=" w-full px-16">
+            <SectionHeading heading={'Manage Classes'}></SectionHeading>
+            <table className="mt-12 table w-full">
                 {/* head*/}
                 <thead>
                     <tr>
@@ -107,24 +110,24 @@ const AllClasses = () => {
                                 {/* <button onClick={() => handleApprove(lesson)} className="btn text-3xl"><FcApprove></FcApprove></button> */}
 
                                 {lesson.status === 'approved' || lesson.status === 'denied' ?
-                                    <button disabled className="btn btn-ghost bg-orange-600  text-white"><FcApprove></FcApprove></button>
+                                    <button disabled className="btn btn-sm btn-outline border-green-600"><FcApproval></FcApproval></button>
                                     :
-                                    <button onClick={() => handleApprove(lesson)} className="btn btn-ghost bg-orange-600  text-white"><FcApprove></FcApprove></button>
+                                    <button onClick={() => handleApprove(lesson)} className="btn btn-sm btn-outline border-green-600" ><FcApproval></FcApproval></button>
                                 }
                             </td>
                             <td>
                                 {/* <button  onClick={() => handleDeny(lesson)} className="btn text-3xl"><FcDisapprove></FcDisapprove></button> */}
 
                                 {lesson.status === 'approved' || lesson.status === 'denied' ?
-                                    <button disabled className="btn btn-ghost bg-orange-600  text-white"><FcDisapprove></FcDisapprove></button>
+                                    <button disabled className="btn btn-sm btn-outline border-red-600 text-red-700"><MdDangerous></MdDangerous></button>
                                     :
-                                    <button onClick={() => handleDeny(lesson)} className="btn btn-ghost bg-orange-600  text-white"><FcDisapprove></FcDisapprove></button>
+                                    <button onClick={() => handleDeny(lesson)} className="btn btn-sm btn-outline border-red-600 text-red-700"><MdDangerous></MdDangerous></button>
                                 }
 
                             </td>
                             <td>
 
-                                <label htmlFor={`my-modal-${index}`} className="btn border-none bg-[#f36ea5]"><FcFeedback></FcFeedback></label>
+                                <label htmlFor={`my-modal-${index}`} className="btn btn-outline btn-sm border-blue-600"><FcFeedback></FcFeedback></label>
                                 <FeedbackModal index={index} lesson={lesson} modalHandler={modalHandler} ></FeedbackModal>
 
                             </td>

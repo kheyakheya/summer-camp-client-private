@@ -2,6 +2,7 @@ import useAxiosSecure from '../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from "react";
 import Swal from 'sweetalert2';
+import SectionHeading from '../Compontents/SectionHeading';
 
 const AllUsers = () => {
     const [axiosSecure]=useAxiosSecure();
@@ -48,9 +49,9 @@ const AllUsers = () => {
     })
     }
     return (
-        <div>
-            <h2>{users.length}</h2>
-            <table className="table w-full">
+        <div className=" w-full px-16">
+            <SectionHeading heading={'Manage Classes'}></SectionHeading>
+            <table className="mt-12 table w-full">
     {/* head*/}
     <thead>
       <tr>
@@ -69,7 +70,7 @@ const AllUsers = () => {
         <td>{user.email}</td>
         <td>
             {user.role === 'admin' ?
-            <button disabled className="btn btn-ghost bg-orange-600  text-white">Admin</button>
+            <button disabled className="btn bg-red-700  text-white">Admin</button>
                           :
              <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600  text-white">Admin</button>
             }

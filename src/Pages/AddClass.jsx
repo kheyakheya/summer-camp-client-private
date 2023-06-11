@@ -46,9 +46,9 @@ const AddClass = () => {
             })
     };
     return (
-        <div className="pt-20 w-full px-16">
+        <div className=" w-full px-16">
             <SectionHeading heading={'Add A Class'}></SectionHeading>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="pt-6" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
                     <label className="label ">
                         <span className="label-text ont-semibold">Class Name</span>
@@ -59,8 +59,7 @@ const AddClass = () => {
                     <label className="label">
                         <span className="label-text">Class Image</span>
                     </label>
-                    <input {...register("image", { required: true })} type="file" className="my-4 file-input file-input-bordered w-full " />
-
+                    <input {...register("image", { required: true })} type="file" className="my-4 file-input file-input-bordered w-full" />
                 </div>
                 <div className="form-control w-full mb-4">
                     <label className="label ">
@@ -92,7 +91,7 @@ const AddClass = () => {
 
 
                 <div className="text-center">
-                    <input className="btn btn-primary my-4" type="submit" value="Add an item" />
+                    <input className="btn bg-red-700 border-none my-4" type="submit" value="Add an item" />
 
                 </div>
             </form>
