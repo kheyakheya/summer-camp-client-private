@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import { FcGoogle } from 'react-icons/fc';
 import { BiShow } from 'react-icons/bi';
 
 import SocialLogin from "../Compontents/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const {logIn}=useContext(AuthContext)
@@ -39,6 +39,9 @@ const Login = () => {
     
     return (
         <div className="hero min-h-screen bg-white pt-6">
+             <Helmet>
+                <title>Sporting Star || Login </title>
+            </Helmet>
         <div className="hero-content flex-col ">
             <div className="text-center py-6">
                 <h1 className="text-5xl tracking-wide  text-red-700 mt-6">Please Login</h1>

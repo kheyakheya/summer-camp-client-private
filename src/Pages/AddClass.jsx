@@ -5,6 +5,7 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const img_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
 const AddClass = () => {
@@ -47,6 +48,9 @@ const AddClass = () => {
     };
     return (
         <div className=" w-full px-16">
+             <Helmet>
+                <title>Sporting Star || Add Class </title>
+            </Helmet>
             <SectionHeading heading={'Add A Class'}></SectionHeading>
             <form className="pt-6" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">

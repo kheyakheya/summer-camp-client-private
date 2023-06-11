@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const PaymentHistory = () => {
     const {user}= useContext(AuthContext);
@@ -14,6 +15,9 @@ const PaymentHistory = () => {
     },[user])
     return (
       <div className="px-12">
+         <Helmet>
+                <title>Sporting Star || Payment History </title>
+            </Helmet>
       <div className="mt-2 mb-16">
       <SectionHeading heading={'Payment History'}></SectionHeading>
 

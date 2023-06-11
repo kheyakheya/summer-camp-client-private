@@ -6,6 +6,7 @@ import { GrUpdate } from "react-icons/gr";
 import UpdateModal from "../Compontents/UpdateModal";
 import Swal from "sweetalert2";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const InstructorClass = () => {
     const {user, loading}= useContext(AuthContext);
@@ -47,6 +48,9 @@ const InstructorClass = () => {
    
     return (
         <div className="px-12">
+             <Helmet>
+                <title>Sporting Star || Instructor Classes</title>
+            </Helmet>
       <div className="mt-2 mb-16 ">
       <SectionHeading heading={'My Added Classes'}></SectionHeading>
 

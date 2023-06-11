@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import InstructorCard from "../Compontents/InstructorCard";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const Instructors = () => {
     const [instructors, setInstructors]= useState([]);
@@ -13,6 +14,9 @@ const Instructors = () => {
     },[])
     return (
         <div className="pt-16">
+             <Helmet>
+                <title>Sporting Star || Instructors </title>
+            </Helmet>
 
             <SectionHeading  heading={'All Instructors'}></SectionHeading>
             <div className="pt-20 grid grid-cols-1 md:grid-cols-3 gap-6 place-content-center">

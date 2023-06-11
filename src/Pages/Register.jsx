@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import { FcGoogle } from "react-icons/fc";
 import SocialLogin from "../Compontents/SocialLogin";
 import { BiShow } from "react-icons/bi";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { register, profileUpdate } = useContext(AuthContext);
@@ -91,8 +91,11 @@ const Register = () => {
     };
 
     return (
-        // TODO: special charecter
+        
         <div className="hero min-h-screen bg-white pt-12">
+             <Helmet>
+                <title>Sporting Star || Register </title>
+            </Helmet>
             <div className="hero-content flex-col ">
                 <div className="text-center pb-4">
                     <h1 className="text-5xl tracking-wide my-6 text-red-700">Please Register</h1>

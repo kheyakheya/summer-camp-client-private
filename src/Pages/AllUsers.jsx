@@ -1,8 +1,8 @@
 import useAxiosSecure from '../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
-import { useState } from "react";
 import Swal from 'sweetalert2';
 import SectionHeading from '../Compontents/SectionHeading';
+import { Helmet } from 'react-helmet-async';
 
 const AllUsers = () => {
     const [axiosSecure]=useAxiosSecure();
@@ -50,6 +50,9 @@ const AllUsers = () => {
     }
     return (
         <div className=" w-full px-16">
+             <Helmet>
+                <title>Sporting Star || Manage Users </title>
+            </Helmet>
             <SectionHeading heading={'Manage Classes'}></SectionHeading>
             <table className="mt-12 table w-full">
     {/* head*/}

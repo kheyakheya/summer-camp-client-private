@@ -4,6 +4,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
 import useCart from '../../hooks/useCart';
 import SectionHeading from '../../Compontents/SectionHeading';
+import { Helmet } from 'react-helmet-async';
 const stripePromise= loadStripe(import.meta.env.VITE_PAYMENT_PK);
 
 
@@ -19,6 +20,9 @@ const Payment = () => {
        
        
            <div>
+             <Helmet>
+                <title>Sporting Star || Payment </title>
+            </Helmet>
             <SectionHeading heading={'Payment'}></SectionHeading>
            <h1 className='text-2xl text-center my-12'>pay $ {price} for {lesson?.name} class</h1>
            

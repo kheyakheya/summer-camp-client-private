@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const MyEnroll = () => {
     const {user}= useContext(AuthContext);
@@ -14,6 +15,9 @@ const MyEnroll = () => {
     },[user])
     return (
       <div className="px-12">
+         <Helmet>
+                <title>Sporting Star || Enroll </title>
+            </Helmet>
       <div className="mt-2 mb-16">
       <SectionHeading heading={'Enrolled Classes'}></SectionHeading>
 

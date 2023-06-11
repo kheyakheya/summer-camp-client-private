@@ -3,6 +3,7 @@ import useCart from "../hooks/useCart";
 import { FaTrash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const StudentCart = () => {
     const [cart, refetch] = useCart();
@@ -37,6 +38,9 @@ const StudentCart = () => {
     }
     return (
         <div className="px-12">
+             <Helmet>
+                <title>Sporting Star || Student Cart</title>
+            </Helmet>
             <div className="mt-2 mb-16">
             <SectionHeading heading={'Selected Classes'}></SectionHeading>
 

@@ -1,4 +1,4 @@
-import { FcApproval,  FcDisapprove, FcFeedback } from "react-icons/fc";
+import { FcApproval, FcFeedback } from "react-icons/fc";
 import { MdDangerous } from "react-icons/md";
 
 import useClasses from "../hooks/useClasses";
@@ -6,6 +6,7 @@ import useClasses from "../hooks/useClasses";
 import Swal from "sweetalert2";
 import FeedbackModal from "../Compontents/FeedbackModal";
 import SectionHeading from "../Compontents/SectionHeading";
+import { Helmet } from "react-helmet-async";
 
 const AllClasses = () => {
     const [classes, refetch] = useClasses();
@@ -82,6 +83,9 @@ const AllClasses = () => {
       }
     return (
         <div className=" w-full px-16">
+             <Helmet>
+                <title>Sporting Star || Manage Classes </title>
+            </Helmet>
             <SectionHeading heading={'Manage Classes'}></SectionHeading>
             <table className="mt-12 table w-full">
                 {/* head*/}
