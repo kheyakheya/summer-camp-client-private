@@ -14,8 +14,9 @@
 * After success full payment class is removed from my class list and added in another page called enrolled class, in mongodb database class collection will be updated and enrolled student will increase by one and available seats will be decreased by one
 * In home page a popular class section made sorting top six classes by enrolled students and and top six instructors
 * Another extra section of successful students made with framer animation package
+* Error page and theme toggle also added
 
-* packages Used: 
+* packages Used in this Project: 
 * "@stripe/react-stripe-js": "^2.1.0",
 * "@stripe/stripe-js": "^1.54.0",
 * "@tanstack/react-query": "^4.29.12",
