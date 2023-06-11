@@ -33,7 +33,7 @@ const FeedbackModal = ({index,lesson,modalHandler}) => {
             </form>
 
                 </div>
-                <div className="modal-action -mt-24">
+                <div className="modal-action -mt-12">
                     <label htmlFor={`my-modal-${index}`} className="btn bg-red-700 border-none">done!</label>
                 </div>
             </div>

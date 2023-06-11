@@ -42,7 +42,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             // axios for get and set jwt token
             if(currentUser){
-                axios.post('http://localhost:5000/jwt',{email:currentUser.email})
+                axios.post('https://assignment-twelve-server-puce.vercel.app/jwt',{email:currentUser.email})
                 .then(data=>{
                     // console.log(data)
                     localStorage.setItem('access-token', data.data.token);

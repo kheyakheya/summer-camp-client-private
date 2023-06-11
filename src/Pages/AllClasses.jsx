@@ -12,7 +12,7 @@ const AllClasses = () => {
     const [classes, refetch] = useClasses();
 
     const handleApprove = (lesson) => {
-        fetch(`http://localhost:5000/classes/approved/${lesson._id}`, {
+        fetch(`https://assignment-twelve-server-puce.vercel.app/classes/approved/${lesson._id}`, {
             method: 'PATCH',
         })
             .then(res => res.json())
@@ -31,7 +31,7 @@ const AllClasses = () => {
 
     }
     const handleDeny = (lesson) => {
-        fetch(`http://localhost:5000/classes/denied/${lesson._id}`, {
+        fetch(`https://assignment-twelve-server-puce.vercel.app/classes/denied/${lesson._id}`, {
             method: 'PATCH',
 
         })
@@ -55,7 +55,7 @@ const AllClasses = () => {
     const modalHandler = (info) => {
         const feedback = info.feedback;
         console.log("feedback",feedback)
-        fetch(`http://localhost:5000/classes/feedback/${info._id}`, {
+        fetch(`https://assignment-twelve-server-puce.vercel.app/classes/feedback/${info._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

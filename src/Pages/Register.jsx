@@ -66,7 +66,7 @@ const Register = () => {
                 profileUpdate(name, photo)
                     .then(() => {
                         const saveUser = { name: name, email: email, image: photo }
-                        fetch(`http://localhost:5000/users/${registeredUser.email}`, {
+                        fetch(`https://assignment-twelve-server-puce.vercel.app/users/${registeredUser.email}`, {
                             method: 'PUT',
                             headers: { 'content-type': 'application/json' },
                             body: JSON.stringify(saveUser)

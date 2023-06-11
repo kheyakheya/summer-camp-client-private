@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 const ApprovedClasses = () => {
     const [classes, setClasses]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/class/approved')
+        fetch('https://assignment-twelve-server-puce.vercel.app/class/approved')
         .then(res=>res.json())
         .then(data=>{
             setClasses(data)

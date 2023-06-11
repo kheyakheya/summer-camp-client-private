@@ -19,7 +19,7 @@ const SocialLogin = () => {
         const loggedUser= result.user;
         console.log("googleUser", loggedUser);
         const saveUser= {name: loggedUser.displayName, email: loggedUser.email, image: loggedUser.photoURL}
-        fetch(`http://localhost:5000/users/${loggedUser.email}`,{
+        fetch(`https://assignment-twelve-server-puce.vercel.app/users/${loggedUser.email}`,{
             method: 'PUT',
             headers:{'content-type': 'application/json'},
             body: JSON.stringify(saveUser)

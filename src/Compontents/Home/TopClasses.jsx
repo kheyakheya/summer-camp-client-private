@@ -5,7 +5,7 @@ import TopClassCard from '../TopClassCard';
 const TopClasses = () => {
     const [topClasses, setTopClasses]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/top-class')
+        fetch('https://assignment-twelve-server-puce.vercel.app/top-class')
         .then(res=>res.json())
         .then(data=>{
             setTopClasses(data)

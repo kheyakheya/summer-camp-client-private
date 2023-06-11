@@ -18,7 +18,7 @@ const ClassCard = ({ lesson }) => {
     const handleCart = (lesson) => {
         if (user && user?.email) {
             const chosenClass = { classId: lesson._id, name: lesson.name, instructor:lesson.instructor, price: lesson.price, email: user.email, enrolled: parseInt(lesson.enrolled), seats: parseInt(lesson.seats), image: lesson.image };
-            fetch('http://localhost:5000/cart', {
+            fetch('https://assignment-twelve-server-puce.vercel.app/cart', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(chosenClass)

@@ -1,4 +1,8 @@
 * Website Name: Sporting Star
+* Admin email: paster@clark.com
+* Admin Password: 1234567A#
+* Instructor email: tim@sky.com
+* Instructor password: 1234567A
 * Created navbar with conditional dashboard and profile pic and a footer
 * Integrated email pass word and google login with firebase
 * Gave admin and instructor roles to the user and private dashboard

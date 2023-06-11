@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 const Instructors = () => {
     const [instructors, setInstructors]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/users/instructors')
+        fetch('https://assignment-twelve-server-puce.vercel.app/users/instructors')
         .then(res=>res.json())
         .then(data=>{
             setInstructors(data)

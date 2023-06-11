@@ -5,7 +5,7 @@ import TopInstructorCard from "./TopInstructorCard";
 const TopInstructor = () => {
     const [topInstructors, setTopInstructors]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/users/instructors/top')
+        fetch('https://assignment-twelve-server-puce.vercel.app/users/instructors/top')
         .then(res=>res.json())
         .then(data=>{
             setTopInstructors(data)
