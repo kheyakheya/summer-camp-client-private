@@ -68,6 +68,7 @@ const AllUsers = () => {
         <th>{index+1}</th>
         <td>{user.name}</td>
         <td>{user.email}</td>
+        {/* ssdddffsf */}
         <td>
             {user.role === 'admin' ?
             <button disabled className="btn bg-red-700  text-white">Admin</button>
