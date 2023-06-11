@@ -49,8 +49,9 @@ const Login = () => {
             <div className='grid md:grid-cols-2 place-items-center'>
                 <div className='hidden md:block md:w-3/4'>
                    
-                    <img src="https://thumbs.dreamstime.com/b/important-part-26968932.jpg" alt="" />
-                    
+                <img src="https://img.freepik.com/free-vector/wireframing-concept-illustration_114360-1249.jpg?w=740&t=st=1686467261~exp=1686467861~hmac=df08b3e30159241fb1d67623b562948a60626dafda3487e3140c734e1d7db381" alt="" />
+                {/* <img src="https://thumbs.dreamstime.com/b/important-part-26968932.jpg" alt="" /> */}
+
                 </div>
             <div className="card flex-shrink-0 w-full md:w-1/2 max-w-sm shadow-2xl bg-base-100">
                 <form onSubmit={handleLogin} className="card-body pb-2">

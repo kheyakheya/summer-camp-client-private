@@ -1,4 +1,5 @@
-* Website Name: Sporting Star
+* Website Name: Sporting Star 
+* Live Link: https://assignment-twelve-5e13f.web.app/
 * Admin email: paster@clark.com
 * Admin Password: 1234567A#
 * Instructor email: tim@sky.com
