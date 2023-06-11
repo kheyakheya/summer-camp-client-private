@@ -68,19 +68,19 @@ const AllUsers = () => {
         <th>{index+1}</th>
         <td>{user.name}</td>
         <td>{user.email}</td>
-        {/* ssdddffsf */}
+        
         <td>
             {user.role === 'admin' ?
-            <button disabled className="btn bg-red-700  text-white">Admin</button>
+            <button disabled className="btn bg-red-700 border-none  text-white">Admin</button>
                           :
-             <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600  text-white">Admin</button>
+             <button onClick={() => handleMakeAdmin(user)} className="btn bg-red-700 border-none  text-white">Admin</button>
             }
         </td>
         <td>
             {user.role === 'instructor' ?
-            <button disabled  className="btn btn-ghost bg-orange-600  text-white">Instructor</button>
+            <button disabled  className="btn  bg-red-700 border-none  text-white">Instructor</button>
             :
-            <button  onClick={() => handleMakeInstructor(user)} className="btn btn-ghost bg-orange-600  text-white">Instructor</button>
+            <button  onClick={() => handleMakeInstructor(user)} className="btn bg-red-700 border-none  text-white">Instructor</button>
              }
             
         </td>

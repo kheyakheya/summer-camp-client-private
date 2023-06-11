@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FcGoogle } from 'react-icons/fc';
+import { BiShow } from 'react-icons/bi';
+
 import SocialLogin from "../Compontents/SocialLogin";
 
 const Login = () => {
@@ -34,29 +36,20 @@ const Login = () => {
         })
         
     }
-    // const handleGoogleLogin=()=>{
-    //     googleLogin()
-    //     .then(result=>{
-    //         const loggedUser= result.user;
-    //         console.log("googleUser", loggedUser);
-    //         setSuccess("Login Successful !")
-    //         navigate(from, {replace: true})
-
-    //     })
-    //     .catch(error=>{
-    //         console.log(error.message);
-    //         setError(error.message)
-    //     })
-    // }
+    
     return (
         <div className="hero min-h-screen bg-white pt-6">
         <div className="hero-content flex-col ">
-            <div className="text-center pb-4">
-                <h1 className="text-5xl tracking-wide font-bold text-white mt-6">Please Login</h1>
+            <div className="text-center py-6">
+                <h1 className="text-5xl tracking-wide  text-red-700 mt-6">Please Login</h1>
             </div>
             <div className='grid md:grid-cols-2 place-items-center'>
                 <div className='hidden md:block md:w-3/4'>
-                    <img src='https://www.getillustrations.com/packs/bloom-vector-illustrations/scenes/_1x/accounts,%20security%20_%20website,%20webpage,%20password,%20lock,%20key,%20user_md.png' alt="" />
+                    {/* <img src='https://www.getillustrations.com/packs/bloom-vector-illustrations/scenes/_1x/accounts,%20security%20_%20website,%20webpage,%20password,%20lock,%20key,%20user_md.png' alt="" /> */}
+                    {/* <img src='https://img.freepik.com/free-vector/yes-no-concept-illustration_114360-7564.jpg?w=740&t=st=1686467009~exp=1686467609~hmac=989f665c6bbc1c6733a6246c53ee00c33fdb24de6e62f90ed5b4495db8f941b7' alt="" /> */}
+                    {/* <img src="https://img.freepik.com/free-vector/wireframing-concept-illustration_114360-1249.jpg?w=740&t=st=1686467261~exp=1686467861~hmac=df08b3e30159241fb1d67623b562948a60626dafda3487e3140c734e1d7db381" alt="" /> */}
+                    <img src="https://thumbs.dreamstime.com/b/important-part-26968932.jpg" alt="" />
+                    
                 </div>
             <div className="card flex-shrink-0 w-full md:w-1/2 max-w-sm shadow-2xl bg-base-100">
                 <form onSubmit={handleLogin} className="card-body pb-2">
@@ -71,17 +64,17 @@ const Login = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input type={show ? "text" : "password" } name='password' placeholder="password" className="input input-bordered" required />
-                        {show ? <p onClick={()=>{setShow(!show)}}><small>Hide Password</small></p> : <p onClick={()=>{setShow(!show)}}><small>Show Password</small></p> }
+                        {show ? <p className="pt-4" onClick={()=>{setShow(!show)}}><BiShow></BiShow></p> : <p className="pt-4"  onClick={()=>{setShow(!show)}}><BiShow></BiShow></p> }
                        
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn bg-red-700 border-none">Login</button>
                     </div>
                 </form>
                 <p className='text-red-700 text-xl px-8 py-4'><small>{error}</small></p>
                 <p className='text-green-700 text-xl px-8'><small >{success}</small></p>
                 
-                <Link className='px-8 -mt-6' to="/register" ><span>New to <Link to='/'><span className='text-secondary'>Wbsite</span></Link>?</span><button className=" px-2 btn btn-link">Register</button></Link>
+                <Link className='px-8 -mt-6' to="/register" ><span>New to <Link to='/'><span className='text-red-700'>Sporting Star</span></Link>?</span><button className=" px-2 btn btn-link">Register</button></Link>
                 <SocialLogin></SocialLogin>
                 {/* <div className="divider text-secondary">login with GOOGlE</div>
                 <div className='text-center'>
