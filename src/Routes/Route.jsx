@@ -57,6 +57,7 @@ import Welcome from "../Pages/welcome";
     {
       path: '/dashboard',
       element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+      // element:<DashboardLayout></DashboardLayout>,
       children:[
         {
           path: 'welcome',

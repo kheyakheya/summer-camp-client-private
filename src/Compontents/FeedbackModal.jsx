@@ -7,7 +7,7 @@ const FeedbackModal = ({index,lesson,modalHandler}) => {
         <input type="checkbox" id={`my-modal-${index}`} className="modal-toggle" />
         <div className="modal ml-auto w-2/3">
             <div className="modal-box w-11/12 max-w-5xl">
-                <h3 className="font-bold  text-center text-secondary text-2xl">Feedback for {lesson.name}</h3>
+                <h3 className="font-bold  text-center text-red-600 text-2xl">Feedback for {lesson.name}</h3>
                 <div className="mt-2">
                 <form onSubmit={handleSubmit(modalHandler)}>
                 <div>
@@ -28,13 +28,13 @@ const FeedbackModal = ({index,lesson,modalHandler}) => {
                
                 
                
-                <input  className="btn btn-sm my-4" type="submit" value="Send Feedback" />
+                <input  className="btn btn-sm bg-red-700 border-none my-4" type="submit" value="Send Feedback" />
 
             </form>
 
                 </div>
                 <div className="modal-action -mt-24">
-                    <label htmlFor={`my-modal-${index}`} className="btn btn-secondary">done!</label>
+                    <label htmlFor={`my-modal-${index}`} className="btn bg-red-700 border-none">done!</label>
                 </div>
             </div>
         </div>

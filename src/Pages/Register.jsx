@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import SocialLogin from "../Compontents/SocialLogin";
+import { BiShow } from "react-icons/bi";
 
 const Register = () => {
     const { register, profileUpdate } = useContext(AuthContext);
@@ -23,10 +24,13 @@ const Register = () => {
         if (passwordInput.length < 6) {
             setPassError("Password must be at least 6 characters long");
         }
+      
         else if (!/.*[A-Z].*/.test(passwordInput)) {
             setPassError("Password must have one uppercase");
         }
-
+        else if (!/.*[@#$%^&+=].*/.test(passwordInput)) {
+            setPassError("Password must have one special character");
+        }
         else {
             setPassError("");
         }
@@ -91,11 +95,11 @@ const Register = () => {
         <div className="hero min-h-screen bg-white pt-12">
             <div className="hero-content flex-col ">
                 <div className="text-center pb-4">
-                    <h1 className="text-5xl tracking-wide my-6 font-bold text-black">Please Register</h1>
+                    <h1 className="text-5xl tracking-wide my-6 text-red-700">Please Register</h1>
                 </div>
-                <div className='grid md:grid-cols-2 place-items-center'>
+                <div className='grid md:grid-cols-2 '>
 
-                    <div className="card flex-shrink-0 w-full mt-6 max-w-sm shadow-2xl bg-base-100">
+                    <div className="ms-32 card flex-shrink-0 w-full mt-6 max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleRegister} className="card-body pb-2 mt-6">
                             <div className="form-control">
                                 <label className="label">
@@ -115,21 +119,21 @@ const Register = () => {
                                 </label>
                                 <input onChange={handlePassword} value={password}
                                     type={show ? "text" : "password"} name='password' placeholder="password" className="input input-bordered" required />
-                                {show ? <p onClick={() => { setShow(!show) }}><small>Hide Password</small></p> : <p onClick={() => { setShow(!show) }}><small>Show Password</small></p>}
-                                {password && passError && <span className='text-red-400'>{passError}</span>}
+                                {show ? <p className="pt-4" onClick={() => { setShow(!show) }}><BiShow></BiShow></p> : <p className="pt-4" onClick={() => { setShow(!show) }}><BiShow></BiShow></p>}
+                                {password && passError && <span className='text-red-600'>{passError}</span>}
 
                             </div>
-                            {/* confirm */}
+                           
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text">Confirm Password</span>
                                 </label>
                                 <input 
                                     type={show ? "text" : "password"} name='confirm' placeholder="confirm password" className="input input-bordered" required />
-                                {show ? <p onClick={() => { setShow(!show) }}><small>Hide Password</small></p> : <p onClick={() => { setShow(!show) }}><small>Show Password</small></p>}
+                                {show ? <p className="pt-4" onClick={() => { setShow(!show) }}><BiShow></BiShow></p> : <p className="pt-4" onClick={() => { setShow(!show) }}><BiShow></BiShow></p>}
 
                             </div>
-                            {/* confirm end */}
+                           
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text"></span>
@@ -138,7 +142,7 @@ const Register = () => {
                             </div>
 
                             <div className="form-control mt-6">
-                                <button className="btn border-none bg-[#f36ea5]">Register</button>
+                                <button className="btn border-none bg-red-700">Register</button>
                             </div>
                         </form>
 
@@ -148,8 +152,10 @@ const Register = () => {
                         <SocialLogin></SocialLogin>
 
                     </div>
-                    <div className='hidden md:block  w-3/4'>
-                        <img src='https://www.getillustrations.com/packs/bloom-vector-illustrations/scenes/_1x/accounts,%20security%20_%20website,%20webpage,%20password,%20lock,%20key,%20user_md.png' alt="" />
+                    <div className='hidden md:block  w-3/4 '>
+                        <img src="https://img.freepik.com/free-vector/wireframing-concept-illustration_114360-1249.jpg?w=740&t=st=1686467261~exp=1686467861~hmac=df08b3e30159241fb1d67623b562948a60626dafda3487e3140c734e1d7db381" alt="" />
+
+                        {/* <img src='https://www.getillustrations.com/packs/bloom-vector-illustrations/scenes/_1x/accounts,%20security%20_%20website,%20webpage,%20password,%20lock,%20key,%20user_md.png' alt="" /> */}
                     </div>
                 </div>
 

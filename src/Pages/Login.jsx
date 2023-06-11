@@ -45,9 +45,7 @@ const Login = () => {
             </div>
             <div className='grid md:grid-cols-2 place-items-center'>
                 <div className='hidden md:block md:w-3/4'>
-                    {/* <img src='https://www.getillustrations.com/packs/bloom-vector-illustrations/scenes/_1x/accounts,%20security%20_%20website,%20webpage,%20password,%20lock,%20key,%20user_md.png' alt="" /> */}
-                    {/* <img src='https://img.freepik.com/free-vector/yes-no-concept-illustration_114360-7564.jpg?w=740&t=st=1686467009~exp=1686467609~hmac=989f665c6bbc1c6733a6246c53ee00c33fdb24de6e62f90ed5b4495db8f941b7' alt="" /> */}
-                    {/* <img src="https://img.freepik.com/free-vector/wireframing-concept-illustration_114360-1249.jpg?w=740&t=st=1686467261~exp=1686467861~hmac=df08b3e30159241fb1d67623b562948a60626dafda3487e3140c734e1d7db381" alt="" /> */}
+                   
                     <img src="https://thumbs.dreamstime.com/b/important-part-26968932.jpg" alt="" />
                     
                 </div>
