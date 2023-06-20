@@ -31,5 +31,5 @@
 * "react-intersection-observer": "^9.4.4",
 * "sweetalert2": "^11.7.11",
 * "swiper": "^9.3.2"
-
+* made public repo
  
